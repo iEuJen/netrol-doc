@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>TimeoutHander · GitBook</title>
+        <title>Interceptor · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="cancel.html" />
+    <link rel="next" href="toCatch.html" />
     
     
-    <link rel="prev" href="toCatch.html" />
+    <link rel="prev" href="module.html" />
     
 
     </head>
@@ -208,7 +208,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="interceptor.html">
+        <li class="chapter active" data-level="2.6" data-path="interceptor.html">
             
                 <a href="interceptor.html">
             
@@ -234,7 +234,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.8" data-path="timeoutHander.html">
+        <li class="chapter " data-level="2.8" data-path="timeoutHander.html">
             
                 <a href="timeoutHander.html">
             
@@ -303,7 +303,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >TimeoutHander</a>
+        <a href=".." >Interceptor</a>
     </h1>
 </div>
 
@@ -318,24 +318,48 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="timeouthander">TimeoutHander</h1>
-<p>&#x5BF9;&#x8D85;&#x65F6;&#x7684;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x7684;&#x51FD;&#x6570;&#x3002;&#x9700;&#x8981;&#x8BBE;&#x7F6E; <a href="config.html">options.config.timeout</a> &#x4E0D;&#x4E3A;0&#x3002;</p>
-<h3 id="&#x4F7F;&#x7528;&#x8303;&#x4F8B;">&#x4F7F;&#x7528;&#x8303;&#x4F8B;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { timeoutHander } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;netrol&apos;</span>
-timeoutHander((info) =&gt; {
-  <span class="hljs-built_in">console</span>.log(info)
+                                <h1 id="interceptor">Interceptor</h1>
+<p>&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="interceptorrequest-&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x62E6;&#x622A;&#x5668;">interceptor.request &#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x62E6;&#x622A;&#x5668;</h3>
+<p>interceptor.request &#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x8BF7;&#x6C42;&#x62E6;&#x622A;&#x5668;&#xFF0C;&#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E00;&#x4E2A; config &#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x4FEE;&#x6539;&#xFF0C;&#x4F46;&#x6700;&#x7EC8;&#x5FC5;&#x987B;&#x5C06;&#x5176;&#x8FD4;&#x56DE;&#x3002;</p>
+<p>config &#x7684;&#x5C5E;&#x6027;&#x8BE6;&#x7EC6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>apiName <code>string</code> apis &#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#x63A5;&#x53E3;&#x540D;</li>
+<li>data <code>any</code> &#x7ECF;&#x8FC7; transformData &#x5904;&#x7406;&#x7684;&#x6570;&#x636E;</li>
+<li>headers <code>object</code> &#x8BF7;&#x6C42;&#x5934;</li>
+<li>method <code>string</code> &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;</li>
+<li>timeout <code>number</code> &#x8D85;&#x65F6;&#x65F6;&#x95F4;</li>
+<li>url <code>string</code> &#x63A5;&#x53E3;&#x94FE;&#x63A5;</li>
+</ul>
+<h4 id="&#x4F7F;&#x7528;&#x8303;&#x4F8B;">&#x4F7F;&#x7528;&#x8303;&#x4F8B;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5BFC;&#x5165;</span>
+<span class="hljs-keyword">import</span> { interceptor } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;netrol&apos;</span>
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;</span>
+interceptor.request((config) =&gt; {
+  <span class="hljs-comment">// &#x5BF9; config &#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;</span>
+  <span class="hljs-keyword">return</span> config
 })
 </code></pre>
-<p>timeoutHander &#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E00;&#x4E2A; info &#x8BE6;&#x60C5;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;&#x5176;&#x5177;&#x4F53;&#x5C5E;&#x6027;&#x5982;&#x4E0B;&#xFF1A;</p>
+<h3 id="interceptorresponse-&#x8BBE;&#x7F6E;&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;">interceptor.response &#x8BBE;&#x7F6E;&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;</h3>
+<p>interceptor.response &#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;&#xFF0C;&#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E00;&#x4E2A; res &#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x4FEE;&#x6539;&#x3002;
+&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x5C06;&#x88AB; leach &#x63A5;&#x6536;&#x5230;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x8FD4;&#x56DE;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219; netrol &#x4F1A;&#x9000;&#x51FA; promise &#x94FE;&#xFF0C;&#x5E76; reject &#x4E00;&#x6B21; type &#x4E3A; &apos;error.ErrorType.CATCHED&apos;(0) &#x7684; &#x9519;&#x8BEF;&#x3002;</p>
+<p>netrol <a href="errorType.html">&#x5BF9;&#x9519;&#x8BEF;&#x8FD4;&#x56DE;&#x8FDB;&#x884C;&#x4E86;&#x5206;&#x7C7B;&#x8BBE;&#x8BA1;</a>&#xFF0C;&#x56E0;&#x6B64;&#x5EFA;&#x8BAE;&#x9700;&#x8981;&#x5BF9;&#x540E;&#x7AEF;&#x6570;&#x636E;&#x505A;&#x5224;&#x65AD;&#x7684;&#x64CD;&#x4F5C;&#x653E;&#x5728; interceptor.response &#x4E2D;&#x8FDB;&#x884C;&#x3002;
+&#x5F53;&#x7ED3;&#x679C;&#x4E0D;&#x60F3;&#x7ED9; request &#x63A5;&#x53D7;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x503C;&#x3002;</p>
+<p>res &#x7684;&#x5C5E;&#x6027;&#x8BE6;&#x7EC6;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ul>
-<li>apiName <code>string</code> apis &#x5B9A;&#x4E49;&#x7684;&#x63A5;&#x53E3;&#x540D;&#x79F0;</li>
-<li>data <code>any</code> &#x4F20;&#x9012;&#x7ED9;&#x540E;&#x7AEF;&#x7684;&#x6570;&#x636E;</li>
-<li>method <code>string</code> http &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;</li>
-<li>timeout <code>number</code> &#x8D85;&#x65F6;&#x65F6;&#x95F4;</li>
-<li>url <code>string</code> http &#x8BF7;&#x6C42;&#x7684; url</li>
+<li>body <code>any</code> &#x540E;&#x7AEF;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;</li>
+<li>status <code>number</code> http &#x72B6;&#x6001;&#x7801;</li>
+<li>statusText <code>string</code> &#x54CD;&#x5E94;&#x72B6;&#x6001;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x672C;&#x4FE1;&#x606F;</li>
+<li>xhr <code>XMLHttpReques</code> XMLHttpRequest &#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</li>
 </ul>
-<p>&#x8D85;&#x65F6;&#x7684;&#x8BF7;&#x6C42;&#x5C06; reject &#x4E00;&#x4E2A; ErrorType.TIMEOUT &#x7684;&#x9519;&#x8BEF;&#x3002;
-&#x62A5;&#x9519;&#x5177;&#x4F53;&#x8BE6;&#x60C5;&#xFF0C;&#x53EF;&#x67E5;&#x770B; <a href="errorType.html">ErrorType</a> &#x4E00;&#x8282;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5BFC;&#x5165;</span>
+<span class="hljs-keyword">import</span> { interceptor } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;netrol&apos;</span>
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;</span>
+interceptor.response((res) =&gt; {
+  <span class="hljs-comment">// &#x5BF9; res &#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;</span>
+  <span class="hljs-keyword">return</span> res
+})
+</code></pre>
 
                                 
                                 </section>
@@ -363,12 +387,12 @@ timeoutHander((info) =&gt; {
 
             
                 
-                <a href="toCatch.html" class="navigation navigation-prev " aria-label="Previous page: ToCatch">
+                <a href="module.html" class="navigation navigation-prev " aria-label="Previous page: Module">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="cancel.html" class="navigation navigation-next " aria-label="Next page: Cancel">
+                <a href="toCatch.html" class="navigation navigation-next " aria-label="Next page: ToCatch">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -379,7 +403,7 @@ timeoutHander((info) =&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TimeoutHander","level":"2.8","depth":1,"next":{"title":"Cancel","level":"2.9","depth":1,"path":"core/cancel.md","ref":"core/cancel.md","articles":[]},"previous":{"title":"ToCatch","level":"2.7","depth":1,"path":"core/toCatch.md","ref":"core/toCatch.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/timeoutHander.md","mtime":"2020-06-14T14:39:25.082Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-14T15:33:33.485Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Interceptor","level":"2.6","depth":1,"next":{"title":"ToCatch","level":"2.7","depth":1,"path":"core/toCatch.md","ref":"core/toCatch.md","articles":[]},"previous":{"title":"Module","level":"2.5","depth":1,"path":"core/module.md","ref":"core/module.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/interceptor.md","mtime":"2020-06-14T14:16:20.393Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T11:53:03.155Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

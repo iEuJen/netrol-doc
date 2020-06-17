@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ErrorType · GitBook</title>
+        <title>Leach · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="config.html" />
     
-    <link rel="prev" href="cancel.html" />
+    
+    <link rel="prev" href="apis.html" />
     
 
     </head>
@@ -154,7 +156,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="leach.html">
+        <li class="chapter active" data-level="2.2" data-path="leach.html">
             
                 <a href="leach.html">
             
@@ -258,7 +260,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.10" data-path="errorType.html">
+        <li class="chapter " data-level="2.10" data-path="errorType.html">
             
                 <a href="errorType.html">
             
@@ -301,7 +303,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >ErrorType</a>
+        <a href=".." >Leach</a>
     </h1>
 </div>
 
@@ -316,43 +318,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="errortype">ErrorType</h1>
-<p>netrol &#x5BF9;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x8FDB;&#x884C;&#x4E86;&#x5206;&#x7C7B;&#x8BBE;&#x8BA1;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E2D;&#x53EF;&#x4EE5;&#x66F4;&#x597D;&#x5730;&#x5904;&#x7406; reject &#x7684;&#x9519;&#x8BEF;&#x3002;</p>
-<h3 id="errorerrortype">error.ErrorType</h3>
-<p>ErrorType &#x4E3B;&#x8981;&#x7684;&#x7C7B;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+                                <h1 id="leach">Leach</h1>
+<h3 id="&#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x8FC7;&#x6EE4;&#x5668;">&#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x8FC7;&#x6EE4;&#x5668;</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x628A; leach &#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;&#x3002;&#x5B83;&#x7684;&#x786E;&#x4E5F;&#x662F;&#x505A;&#x4E86;&#x548C;<a href="interceptor.html">&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;</a>&#x76F8;&#x540C;&#x7684;&#x4E8B;&#x60C5;&#x3002;
+&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;&#x4F1A;&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#xFF0C;&#x800C; leach &#x53EA;&#x9488;&#x5BF9;&#x7279;&#x5B9A; api &#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#x3002;
+&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x548C; apis &#x76F8;&#x4F3C;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F; apis[apiname] &#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x800C; leach[apiname] &#x662F;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// netrol/leach</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  apiname (res) {
+    <span class="hljs-comment">// &#x5C06;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x4E0A;&#x7684; body&#xFF08;&#x540E;&#x7AEF;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF09;&#x8FD4;&#x56DE;</span>
+    <span class="hljs-keyword">return</span> res.body
+  }
+}
+</code></pre>
+<h4 id="response">response</h4>
+<p>&#x5728; leach &#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x63A5;&#x6536;&#x4E00;&#x4E2A; response &#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x5305;&#x62EC;&#xFF1A;</p>
 <ul>
-<li>CATCHED &#x4E3A; 0&#xFF0C;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; toCatch &#x51FD;&#x6570;&#xFF08;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x62E6;&#x622A;&#xFF09;</li>
-<li>FAIL &#x4E3A; 1&#xFF0C;&#x4E00;&#x822C;&#x9519;&#x8BEF;</li>
-<li>THROTTLE &#x4E3A; 2&#xFF0C;&#x89E6;&#x53D1;&#x8282;&#x6D41;</li>
-<li>STATUS &#x4E3A; 3&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x72B6;&#x6001;&#x7801;&#x9519;&#x8BEF;</li>
-<li>TIMEOUT &#x4E3A; 4&#xFF0C;&#x8D85;&#x65F6;&#x9519;&#x8BEF;</li>
-<li>CANCELED &#x4E3A; 5&#xFF0C;&#x8BF7;&#x6C42;&#x88AB;&#x53D6;&#x6D88;</li>
+<li><p>body</p>
+<p>&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;</p>
+</li>
+<li><p>status</p>
+<p>http &#x72B6;&#x6001;&#x7801;</p>
+</li>
+<li><p>statusText</p>
+<p>http &#x54CD;&#x5E94;&#x72B6;&#x6001;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x672C;&#x4FE1;&#x606F;</p>
+</li>
+<li><p>xhr</p>
+<p>XMLHttpRequest &#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</p>
+</li>
 </ul>
-<h3 id="errortojson">error.toJSON</h3>
-<p>&#x5C06; error &#x8F6C;&#x4E3A;&#x4E00;&#x4E2A; json &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;</p>
+<p>leach &#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x662F; Netrol promise &#x94FE;&#x6267;&#x884C;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#x3002;
+&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5728; leach[apiname] &#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#xFF0C;&#x5C06;&#x4F5C;&#x4E3A;&#x8C03;&#x7528; request &#x8BF7;&#x6C42;&#x51FD;&#x6570; promise resolve &#x7684;&#x7ED3;&#x679C;&#x3002;</p>
 <h3 id="&#x4F7F;&#x7528;&#x8303;&#x4F8B;">&#x4F7F;&#x7528;&#x8303;&#x4F8B;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">demo</span> (<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">let</span> res = <span class="hljs-keyword">await</span> request(<span class="hljs-string">&apos;apiname&apos;</span>)
-  } <span class="hljs-keyword">catch</span> (err) {
-    <span class="hljs-built_in">console</span>.log(err.type) <span class="hljs-comment">// number</span>
-    <span class="hljs-built_in">console</span>.log(err.ErrorType)
-    <span class="hljs-comment">// {</span>
-    <span class="hljs-comment">//   CATCHED: 0,</span>
-    <span class="hljs-comment">//   FAIL: 1,</span>
-    <span class="hljs-comment">//   THROTTLE: 2,</span>
-    <span class="hljs-comment">//   STATUS: 3,</span>
-    <span class="hljs-comment">//   TIMEOUT: 4,</span>
-    <span class="hljs-comment">//   CANCELED: 5</span>
-    <span class="hljs-comment">// }</span>
-    <span class="hljs-built_in">console</span>.log(err.toJSON()) <span class="hljs-comment">// object</span>
+<pre><code class="lang-javascript"><span class="hljs-comment">// netrol/leach.js</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  apiname (res) {
+    <span class="hljs-comment">// &#x6267;&#x884C;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-comment">// ... &#x8FD4;&#x56DE;&#x7ED3;&#x679C;</span>
   }
 }
 
-request(<span class="hljs-string">&apos;apiname&apos;</span>)
-.then(res)
-.catch(err =&gt; {
-  <span class="hljs-built_in">console</span>.log(err.toJSON())
+<span class="hljs-comment">// netrol/index.js</span>
+<span class="hljs-keyword">import</span> Netrol <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;netrol&apos;</span>
+<span class="hljs-keyword">import</span> leach <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./leach.js&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Netrol.create({
+  leach,
+  <span class="hljs-comment">// ...&#x5176;&#x4ED6;&#x914D;&#x7F6E;</span>
 })
 </code></pre>
 
@@ -382,10 +394,14 @@ request(<span class="hljs-string">&apos;apiname&apos;</span>)
 
             
                 
-                <a href="cancel.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Cancel">
+                <a href="apis.html" class="navigation navigation-prev " aria-label="Previous page: Apis">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="config.html" class="navigation navigation-next " aria-label="Next page: Config">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -394,7 +410,7 @@ request(<span class="hljs-string">&apos;apiname&apos;</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ErrorType","level":"2.10","depth":1,"previous":{"title":"Cancel","level":"2.9","depth":1,"path":"core/cancel.md","ref":"core/cancel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/errorType.md","mtime":"2020-06-14T15:06:46.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-14T15:33:33.485Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Leach","level":"2.2","depth":1,"next":{"title":"Config","level":"2.3","depth":1,"path":"core/config.md","ref":"core/config.md","articles":[]},"previous":{"title":"Apis","level":"2.1","depth":1,"path":"core/apis.md","ref":"core/apis.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/leach.md","mtime":"2020-06-14T12:19:55.248Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T11:53:03.155Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
