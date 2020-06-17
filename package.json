@@ -1,0 +1,12 @@
+{
+  "name": "netrol-doc",
+  "version": "1.0.0",
+  "description": "netrol document",
+  "main": "index.js",
+  "scripts": {
+    "start": "gitbook serve ./ --log=debug --debug",
+    "build": "gitbook build"
+  },
+  "author": "",
+  "license": "ISC"
+}
