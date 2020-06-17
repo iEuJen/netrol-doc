@@ -6,7 +6,7 @@ Netrol 提供了 netrol-cli 用于快速创建一个基础的 Netrol 项目结�
 
 #### 安装脚手架
 
-> npm install netrol -D
+> npm install netrol-cli -D
 
 #### 在项目根目录下运行 cli 命令
 
