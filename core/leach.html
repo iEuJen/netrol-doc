@@ -208,9 +208,42 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="interceptor.html">
+        <li class="chapter " data-level="2.6" data-path="throttle.html">
             
-                <a href="interceptor.html">
+                <a href="throttle.html">
+            
+                    
+                    Throttle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="errorType.html">
+            
+                <a href="errorType.html">
+            
+                    
+                    ErrorType
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">进阶使用</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../adv/interceptor.html">
+            
+                <a href="../adv/interceptor.html">
             
                     
                     Interceptor
@@ -221,9 +254,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.7" data-path="toCatch.html">
+        <li class="chapter " data-level="3.2" data-path="../adv/toCatch.html">
             
-                <a href="toCatch.html">
+                <a href="../adv/toCatch.html">
             
                     
                     ToCatch
@@ -234,9 +267,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="timeoutHander.html">
+        <li class="chapter " data-level="3.3" data-path="../adv/timeoutHander.html">
             
-                <a href="timeoutHander.html">
+                <a href="../adv/timeoutHander.html">
             
                     
                     TimeoutHander
@@ -247,9 +280,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.9" data-path="cancel.html">
+        <li class="chapter " data-level="3.4" data-path="../adv/cancel.html">
             
-                <a href="cancel.html">
+                <a href="../adv/cancel.html">
             
                     
                     Cancel
@@ -260,12 +293,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.10" data-path="errorType.html">
+        <li class="chapter " data-level="3.5" data-path="../adv/progressListener.html">
             
-                <a href="errorType.html">
+                <a href="../adv/progressListener.html">
             
                     
-                    ErrorType
+                    ProgressListener
             
                 </a>
             
@@ -320,19 +353,22 @@
                                 
                                 <h1 id="leach">Leach</h1>
 <h3 id="&#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x8FC7;&#x6EE4;&#x5668;">&#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x8FC7;&#x6EE4;&#x5668;</h3>
-<p>&#x4F60;&#x53EF;&#x4EE5;&#x628A; leach &#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;&#x3002;&#x5B83;&#x7684;&#x786E;&#x4E5F;&#x662F;&#x505A;&#x4E86;&#x548C;<a href="interceptor.html">&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;</a>&#x76F8;&#x540C;&#x7684;&#x4E8B;&#x60C5;&#x3002;
+<blockquote>
+<p>leach[apiname](response: object): any</p>
+</blockquote>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x628A; leach &#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;&#x3002;&#x5B83;&#x7684;&#x786E;&#x4E5F;&#x662F;&#x505A;&#x4E86;&#x548C;<a href="interceptor.md">&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;</a>&#x76F8;&#x540C;&#x7684;&#x4E8B;&#x60C5;&#x3002;
 &#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x54CD;&#x5E94;&#x62E6;&#x622A;&#x5668;&#x4F1A;&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#xFF0C;&#x800C; leach &#x53EA;&#x9488;&#x5BF9;&#x7279;&#x5B9A; api &#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#x3002;
 &#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x548C; apis &#x76F8;&#x4F3C;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F; apis[apiname] &#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x800C; leach[apiname] &#x662F;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// netrol/leach</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
-  apiname (res) {
+  apiname (response) {
     <span class="hljs-comment">// &#x5C06;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x4E0A;&#x7684; body&#xFF08;&#x540E;&#x7AEF;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF09;&#x8FD4;&#x56DE;</span>
-    <span class="hljs-keyword">return</span> res.body
+    <span class="hljs-keyword">return</span> response.body
   }
 }
 </code></pre>
-<h4 id="response">response</h4>
-<p>&#x5728; leach &#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x63A5;&#x6536;&#x4E00;&#x4E2A; response &#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x5305;&#x62EC;&#xFF1A;</p>
+<h4 id="response-&#x5BF9;&#x8C61;">response &#x5BF9;&#x8C61;</h4>
+<p>response &#x5BF9;&#x8C61;&#x662F; leach &#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x6240;&#x63A5;&#x6536;&#x7684;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x53C2;&#x6570;&#xFF0C;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x5305;&#x62EC;&#xFF1A;</p>
 <ul>
 <li><p>body</p>
 <p>&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;</p>
@@ -410,7 +446,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Leach","level":"2.2","depth":1,"next":{"title":"Config","level":"2.3","depth":1,"path":"core/config.md","ref":"core/config.md","articles":[]},"previous":{"title":"Apis","level":"2.1","depth":1,"path":"core/apis.md","ref":"core/apis.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/leach.md","mtime":"2020-06-14T12:19:55.248Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T13:00:54.910Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Leach","level":"2.2","depth":1,"next":{"title":"Config","level":"2.3","depth":1,"path":"core/config.md","ref":"core/config.md","articles":[]},"previous":{"title":"Apis","level":"2.1","depth":1,"path":"core/apis.md","ref":"core/apis.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/leach.md","mtime":"2020-06-21T06:33:33.342Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-21T06:42:22.380Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

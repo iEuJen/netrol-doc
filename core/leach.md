@@ -2,6 +2,8 @@
 
 ### 接口响应数据过滤器
 
+> leach\[apiname\](response: object): any
+
 你可以把 leach 理解为一个响应拦截器。它的确也是做了和[响应拦截器](./interceptor.md)相同的事情。
 不同的是，响应拦截器会对每一个接口进行拦截，而 leach 只针对特定 api 对象进行拦截。
 使用方式和 apis 相似，不同的是 apis\[apiname\] 是一个对象或者字符串，而 leach\[apiname\] 是一个方法。
@@ -9,16 +11,16 @@
 ```javascript
 // netrol/leach
 export default {
-  apiname (res) {
+  apiname (response) {
     // 将响应数据上的 body（后端返回的数据）返回
-    return res.body
+    return response.body
   }
 }
 ```
 
-#### response
+#### response 对象
 
-在 leach 上定义的方法，接收一个 response 对象作为参数，对象属性包括：
+response 对象是 leach 上定义的方法所接收的一个回调参数，对象属性包括：
 
 - body
 

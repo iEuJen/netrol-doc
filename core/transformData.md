@@ -1,5 +1,8 @@
 # TransformData
 
+> options.transformData(data: any): any
+
+
 Netrol 默认使用 JSON 字符串与后端进行交互。
 但如果你的后端要求使用其他数据类型，一般是 FormData。
 那么你就可以考虑使用 transformData 这一配置项了。

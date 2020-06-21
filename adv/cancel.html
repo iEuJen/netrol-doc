@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ErrorType · GitBook</title>
+        <title>Cancel · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../adv/interceptor.html" />
+    <link rel="next" href="progressListener.html" />
     
     
-    <link rel="prev" href="throttle.html" />
+    <link rel="prev" href="timeoutHander.html" />
     
 
     </head>
@@ -143,9 +143,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="apis.html">
+        <li class="chapter " data-level="2.1" data-path="../core/apis.html">
             
-                <a href="apis.html">
+                <a href="../core/apis.html">
             
                     
                     Apis
@@ -156,9 +156,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="leach.html">
+        <li class="chapter " data-level="2.2" data-path="../core/leach.html">
             
-                <a href="leach.html">
+                <a href="../core/leach.html">
             
                     
                     Leach
@@ -169,9 +169,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="config.html">
+        <li class="chapter " data-level="2.3" data-path="../core/config.html">
             
-                <a href="config.html">
+                <a href="../core/config.html">
             
                     
                     Config
@@ -182,9 +182,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="transformData.html">
+        <li class="chapter " data-level="2.4" data-path="../core/transformData.html">
             
-                <a href="transformData.html">
+                <a href="../core/transformData.html">
             
                     
                     TransformData
@@ -195,9 +195,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="module.html">
+        <li class="chapter " data-level="2.5" data-path="../core/module.html">
             
-                <a href="module.html">
+                <a href="../core/module.html">
             
                     
                     Module
@@ -208,9 +208,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="throttle.html">
+        <li class="chapter " data-level="2.6" data-path="../core/throttle.html">
             
-                <a href="throttle.html">
+                <a href="../core/throttle.html">
             
                     
                     Throttle
@@ -221,9 +221,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.7" data-path="errorType.html">
+        <li class="chapter " data-level="2.7" data-path="../core/errorType.html">
             
-                <a href="errorType.html">
+                <a href="../core/errorType.html">
             
                     
                     ErrorType
@@ -241,9 +241,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../adv/interceptor.html">
+        <li class="chapter " data-level="3.1" data-path="interceptor.html">
             
-                <a href="../adv/interceptor.html">
+                <a href="interceptor.html">
             
                     
                     Interceptor
@@ -254,9 +254,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../adv/toCatch.html">
+        <li class="chapter " data-level="3.2" data-path="toCatch.html">
             
-                <a href="../adv/toCatch.html">
+                <a href="toCatch.html">
             
                     
                     ToCatch
@@ -267,9 +267,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="../adv/timeoutHander.html">
+        <li class="chapter " data-level="3.3" data-path="timeoutHander.html">
             
-                <a href="../adv/timeoutHander.html">
+                <a href="timeoutHander.html">
             
                     
                     TimeoutHander
@@ -280,9 +280,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="../adv/cancel.html">
+        <li class="chapter active" data-level="3.4" data-path="cancel.html">
             
-                <a href="../adv/cancel.html">
+                <a href="cancel.html">
             
                     
                     Cancel
@@ -293,9 +293,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="../adv/progressListener.html">
+        <li class="chapter " data-level="3.5" data-path="progressListener.html">
             
-                <a href="../adv/progressListener.html">
+                <a href="progressListener.html">
             
                     
                     ProgressListener
@@ -336,7 +336,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >ErrorType</a>
+        <a href=".." >Cancel</a>
     </h1>
 </div>
 
@@ -351,45 +351,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="errortype">ErrorType</h1>
-<p>netrol &#x5BF9;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x8FDB;&#x884C;&#x4E86;&#x5206;&#x7C7B;&#x8BBE;&#x8BA1;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E2D;&#x53EF;&#x4EE5;&#x66F4;&#x597D;&#x5730;&#x5904;&#x7406; reject &#x7684;&#x9519;&#x8BEF;&#x3002;</p>
-<h3 id="errorerrortype">error.ErrorType</h3>
-<p>ErrorType &#x4E3B;&#x8981;&#x7684;&#x7C7B;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ul>
-<li>CATCHED &#x4E3A; 0&#xFF0C;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; toCatch &#x51FD;&#x6570;&#xFF08;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x62E6;&#x622A;&#xFF09;</li>
-<li>FAIL &#x4E3A; 1&#xFF0C;&#x4E00;&#x822C;&#x9519;&#x8BEF;</li>
-<li>THROTTLE &#x4E3A; 2&#xFF0C;&#x89E6;&#x53D1;&#x8282;&#x6D41;</li>
-<li>STATUS &#x4E3A; 3&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x72B6;&#x6001;&#x7801;&#x9519;&#x8BEF;</li>
-<li>TIMEOUT &#x4E3A; 4&#xFF0C;&#x8D85;&#x65F6;&#x9519;&#x8BEF;</li>
-<li>CANCELED &#x4E3A; 5&#xFF0C;&#x8BF7;&#x6C42;&#x88AB;&#x53D6;&#x6D88;</li>
-</ul>
-<h3 id="errortojson">error.toJSON</h3>
-<p>&#x5C06; error &#x8F6C;&#x4E3A;&#x4E00;&#x4E2A; json &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;</p>
+                                <h1 id="cancel">Cancel</h1>
+<blockquote>
+<p>cancel(name: string): boolean</p>
+</blockquote>
+<p>netrol &#x652F;&#x6301;&#x53D6;&#x6D88;&#x7279;&#x5B9A; api &#x7684;&#x8BF7;&#x6C42;&#x3002;&#x53EA;&#x9700;&#x8981;&#x5728;&#x8C03;&#x7528; cancel &#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F20;&#x9012;&#x5BF9;&#x5E94;&#x7684; apiname&#x3002;</p>
 <h3 id="&#x4F7F;&#x7528;&#x8303;&#x4F8B;">&#x4F7F;&#x7528;&#x8303;&#x4F8B;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">demo</span> (<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">let</span> res = <span class="hljs-keyword">await</span> request(<span class="hljs-string">&apos;apiname&apos;</span>)
-  } <span class="hljs-keyword">catch</span> (err) {
-    <span class="hljs-built_in">console</span>.log(err.type) <span class="hljs-comment">// number</span>
-    <span class="hljs-built_in">console</span>.log(err.ErrorType)
-    <span class="hljs-comment">// {</span>
-    <span class="hljs-comment">//   CATCHED: 0,</span>
-    <span class="hljs-comment">//   FAIL: 1,</span>
-    <span class="hljs-comment">//   THROTTLE: 2,</span>
-    <span class="hljs-comment">//   STATUS: 3,</span>
-    <span class="hljs-comment">//   TIMEOUT: 4,</span>
-    <span class="hljs-comment">//   CANCELED: 5</span>
-    <span class="hljs-comment">// }</span>
-    <span class="hljs-built_in">console</span>.log(err.toJSON()) <span class="hljs-comment">// object</span>
-  }
-}
-
-request(<span class="hljs-string">&apos;apiname&apos;</span>)
-.then(res)
-.catch(err =&gt; {
-  <span class="hljs-built_in">console</span>.log(err.toJSON())
-})
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { cancel } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;netrol&apos;</span>
+cancel(<span class="hljs-string">&apos;apiname&apos;</span>)
+cancel(<span class="hljs-string">&apos;moduleA.apiname&apos;</span>)
 </code></pre>
+<p>&#x6267;&#x884C; cancel &#x51FD;&#x6570;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; boolean &#x503C;&#x3002;true &#x8868;&#x793A;&#x53D6;&#x6D88;&#x6210;&#x529F;&#x3002;false &#x5219;&#x53EF;&#x80FD;&#x8BF7;&#x6C42;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#xFF0C;&#x6216;&#x8005; apiname &#x4E0D;&#x5B58;&#x5728;&#x3002;</p>
+<p>&#x88AB;&#x53D6;&#x6D88;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x5C06; reject &#x4E00;&#x4E2A; ErrorType.CANCELED &#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x62A5;&#x9519;&#x5177;&#x4F53;&#x8BE6;&#x60C5;&#xFF0C;&#x53EF;&#x67E5;&#x770B; <a href="errorType.md">ErrorType</a> &#x4E00;&#x8282;&#x3002;</p>
 
                                 
                                 </section>
@@ -417,12 +391,12 @@ request(<span class="hljs-string">&apos;apiname&apos;</span>)
 
             
                 
-                <a href="throttle.html" class="navigation navigation-prev " aria-label="Previous page: Throttle">
+                <a href="timeoutHander.html" class="navigation navigation-prev " aria-label="Previous page: TimeoutHander">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../adv/interceptor.html" class="navigation navigation-next " aria-label="Next page: Interceptor">
+                <a href="progressListener.html" class="navigation navigation-next " aria-label="Next page: ProgressListener">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -433,7 +407,7 @@ request(<span class="hljs-string">&apos;apiname&apos;</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ErrorType","level":"2.7","depth":1,"next":{"title":"Interceptor","level":"3.1","depth":1,"path":"adv/interceptor.md","ref":"adv/interceptor.md","articles":[]},"previous":{"title":"Throttle","level":"2.6","depth":1,"path":"core/throttle.md","ref":"core/throttle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/errorType.md","mtime":"2020-06-14T15:06:46.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-21T06:42:22.380Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cancel","level":"3.4","depth":1,"next":{"title":"ProgressListener","level":"3.5","depth":1,"path":"adv/progressListener.md","ref":"adv/progressListener.md","articles":[]},"previous":{"title":"TimeoutHander","level":"3.3","depth":1,"path":"adv/timeoutHander.md","ref":"adv/timeoutHander.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"adv/cancel.md","mtime":"2020-06-21T06:41:59.391Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-21T06:42:22.380Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>开始 · GitBook</title>
+        <title>ProgressListener · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../core/apis.html" />
     
-    
-    <link rel="prev" href="install.html" />
+    <link rel="prev" href="cancel.html" />
     
 
     </head>
@@ -104,9 +102,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="install.html">
+        <li class="chapter " data-level="1.2" data-path="../get/install.html">
             
-                <a href="install.html">
+                <a href="../get/install.html">
             
                     
                     安装
@@ -118,9 +116,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="start.html">
+        <li class="chapter " data-level="1.2.1" data-path="../get/start.html">
             
-                <a href="start.html">
+                <a href="../get/start.html">
             
                     
                     开始
@@ -241,9 +239,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../adv/interceptor.html">
+        <li class="chapter " data-level="3.1" data-path="interceptor.html">
             
-                <a href="../adv/interceptor.html">
+                <a href="interceptor.html">
             
                     
                     Interceptor
@@ -254,9 +252,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../adv/toCatch.html">
+        <li class="chapter " data-level="3.2" data-path="toCatch.html">
             
-                <a href="../adv/toCatch.html">
+                <a href="toCatch.html">
             
                     
                     ToCatch
@@ -267,9 +265,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="../adv/timeoutHander.html">
+        <li class="chapter " data-level="3.3" data-path="timeoutHander.html">
             
-                <a href="../adv/timeoutHander.html">
+                <a href="timeoutHander.html">
             
                     
                     TimeoutHander
@@ -280,9 +278,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="../adv/cancel.html">
+        <li class="chapter " data-level="3.4" data-path="cancel.html">
             
-                <a href="../adv/cancel.html">
+                <a href="cancel.html">
             
                     
                     Cancel
@@ -293,9 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="../adv/progressListener.html">
+        <li class="chapter active" data-level="3.5" data-path="progressListener.html">
             
-                <a href="../adv/progressListener.html">
+                <a href="progressListener.html">
             
                     
                     ProgressListener
@@ -336,7 +334,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >开始</a>
+        <a href=".." >ProgressListener</a>
     </h1>
 </div>
 
@@ -351,69 +349,74 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5F00;&#x59CB;">&#x5F00;&#x59CB;</h1>
-<p>&#x5F53;&#x4F60;&#x4F7F;&#x7528; netrol-cli &#x521B;&#x5EFA;&#x9879;&#x76EE;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x9879;&#x76EE;&#x4E2D;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; netrol &#x7684;&#x76EE;&#x5F55;</p>
-<h3 id="&#x76EE;&#x5F55;&#x7ED3;&#x6784;">&#x76EE;&#x5F55;&#x7ED3;&#x6784;</h3>
+                                <h1 id="progresslistener">ProgressListener</h1>
+<p>&#x7528;&#x4E8E;&#x76D1;&#x542C;&#x4E0A;&#x4F20;/&#x4E0B;&#x8F7D;&#x8FDB;&#x5EA6;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="progresslistenerupload-&#x4E0A;&#x4F20;&#x76D1;&#x542C;&#x5668;">progressListener.upload &#x4E0A;&#x4F20;&#x76D1;&#x542C;&#x5668;</h3>
 <blockquote>
-<p>apis.js</p>
-<p>index.js</p>
-<p>leach.js</p>
+<p>progressListener.upload(apiName: string, exec: Function)</p>
 </blockquote>
-<h3 id="&#x6F14;&#x793A;">&#x6F14;&#x793A;</h3>
-<p>netrol-cli &#x4F1A;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x9700;&#x8981;&#xFF0C;&#x5C06;&#x9879;&#x76EE;&#x5404;&#x4E2A;&#x529F;&#x80FD;&#x6A21;&#x5757;&#x5206;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x6C47;&#x603B;&#xFF0C;&#x505A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// @/netrol/index.js</span>
-<span class="hljs-keyword">import</span> Netrol <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;netrol&apos;</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Netrol.create({
-  config: {
-    baseUrl: <span class="hljs-string">&apos;http://yourwebsite.com&apos;</span>
-  },
-  apis: {
-    apiname: {
-      url: <span class="hljs-string">&apos;/demo&apos;</span>
-      method: <span class="hljs-string">&apos;post&apos;</span>
-    } 
-  },
-  leach: {
-    apiname (res) {
-      <span class="hljs-keyword">return</span> res
-    }
-  },
+<p>&#x4E0A;&#x4F20;&#x76D1;&#x542C;&#x5668;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8981;&#x76D1;&#x542C;&#x7684; apiName&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x89E6;&#x53D1;&#x76D1;&#x542C;&#x7684;&#x65B9;&#x6CD5;&#x3002;
+exec &#x6267;&#x884C;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E00;&#x4E2A; evt &#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x5224;&#x65AD;&#x76D1;&#x542C;&#x7C7B;&#x578B;&#xFF0C;&#x4EE5;&#x53CA;&#x8FDB;&#x5EA6;&#x72B6;&#x6001;&#x3002;</p>
+<h4 id="&#x4F7F;&#x7528;&#x8303;&#x4F8B;">&#x4F7F;&#x7528;&#x8303;&#x4F8B;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { progressListener } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;netrol&apos;</span>
+progressListener.upload(<span class="hljs-string">&apos;file&apos;</span>, (evt) =&gt; {
+  <span class="hljs-built_in">console</span>.log(evt)
+  <span class="hljs-comment">/**
+   * evt &#x5BF9;&#x8C61;
+   * {
+      type: string,
+      event: ProgressEvent,
+      status: number,
+      statusText: string,
+      ProgressStatus: object
+      total: number
+      loaded: number
+   * }
+   */</span>
 })
 </code></pre>
-<p>&#x6267;&#x884C; Netrol.create &#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Netrol &#x5B9E;&#x4F8B;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x51FD;&#x6570;&#xFF08;&#x540E;&#x9762;&#x6587;&#x6863;&#x4E2D;&#x51FA;&#x73B0;&#x7684; request &#x51FD;&#x6570;&#x6307;&#x7684;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#xFF09;&#x3002;</p>
-<p><font color="#dd0000">&#x6CE8;&#x610F;&#xFF1A;</font>Netrol.create &#x5728;&#x9879;&#x76EE;&#x4E2D;&#x53EA;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x56E0;&#x6B64;&#x91CD;&#x590D;&#x8C03;&#x7528; Netrol.create &#x53EA;&#x6709;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x65F6;&#x4F20;&#x9012;&#x7684; options &#x914D;&#x7F6E;&#x662F;&#x6709;&#x6548;&#x7684;</p>
-<p>&#x5728;&#x9700;&#x8981;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x7684;&#x5730;&#x65B9;&#x5BFC;&#x5165; @/netrol/index.js</p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5BFC;&#x5165;&#x8BF7;&#x6C42;&#x51FD;&#x6570;</span>
-<span class="hljs-keyword">import</span> request <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/netrol/index.js&apos;</span>
-<span class="hljs-comment">// &#x8C03;&#x7528;&#x5BF9;&#x8C61;api&#x53D1;&#x8D77;&#x8BF7;&#x6C42;</span>
-request(<span class="hljs-string">&apos;apiname&apos;</span>, { 
-  data: <span class="hljs-string">&apos;&#x4F20;&#x9012;&#x7ED9;&#x540E;&#x7AEF;&#x7684;&#x6570;&#x636E;&apos;</span> 
-})
-.then(res =&gt; {
-  <span class="hljs-comment">// &#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;</span>
-  <span class="hljs-built_in">console</span>.log(res)
+<h3 id="progresslistenerdownload-&#x4E0B;&#x8F7D;&#x76D1;&#x542C;&#x5668;">progressListener.download &#x4E0B;&#x8F7D;&#x76D1;&#x542C;&#x5668;</h3>
+<blockquote>
+<p>progressListener.download(apiName: string, exec: Function)</p>
+</blockquote>
+<p>&#x4E0B;&#x8F7D;&#x76D1;&#x542C;&#x5668;&#x4F7F;&#x7528;&#x540C;&#x4E0A;&#x8F7D;&#x76D1;&#x542C;&#x5668;&#x4E00;&#x6837;&#x3002;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8981;&#x76D1;&#x542C;&#x7684; apiName&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x89E6;&#x53D1;&#x76D1;&#x542C;&#x7684;&#x65B9;&#x6CD5;&#x3002;
+exec &#x6267;&#x884C;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E00;&#x4E2A; event &#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x5224;&#x65AD;&#x76D1;&#x542C;&#x7C7B;&#x578B;&#xFF0C;&#x4EE5;&#x53CA;&#x8FDB;&#x5EA6;&#x72B6;&#x6001;&#x3002;</p>
+<h4 id="&#x4F7F;&#x7528;&#x8303;&#x4F8B;">&#x4F7F;&#x7528;&#x8303;&#x4F8B;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { progressListener } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;netrol&apos;</span>
+progressListener.download(<span class="hljs-string">&apos;file&apos;</span>, (evt) =&gt; {
+  <span class="hljs-built_in">console</span>.log(evt)
+  <span class="hljs-comment">/**
+   * evt &#x5BF9;&#x8C61;
+   * {
+      type: string,
+      event: ProgressEvent,
+      status: number,
+      statusText: string,
+      ProgressStatus: object
+      total: number
+      loaded: number
+   * }
+   */</span>
 })
 </code></pre>
-<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E86;&#x89E3;&#x5230;&#xFF0C;&#x8981;&#x4F7F;&#x7528; Netrol &#x8FDB;&#x884C;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528; create &#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4F20;&#x9012;&#x4E00;&#x4E2A; options &#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002;
-&#x5176;&#x4E2D;&#x5305;&#x542B;config&#xFF0C;apis&#xFF0C;leach &#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x3002;&#x800C;&#x5B83;&#x4EEC;&#x4E2D;&#x53EA;&#x6709; apis &#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x5176;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x9879;&#x76EE;&#x4E2D;&#x6240;&#x6709;&#x63A5;&#x53E3;&#x7684;url&#x3002;</p>
-<p>&#x4E0B;&#x9762;&#x5217;&#x51FA; options &#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#xFF1A;</p>
-<h3 id="options">options</h3>
+<h3 id="evt-&#x5BF9;&#x8C61;">evt &#x5BF9;&#x8C61;</h3>
+<p>evt &#x662F;&#x4E0A;&#x4F20;/&#x4E0B;&#x8F7D;&#x76D1;&#x542C;&#x5668;&#x7684;&#x56DE;&#x8C03;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;</p>
 <ul>
-<li><p><a href="../core/apis.html">apis</a> <code>object</code></p>
-<p>&#x63A5;&#x53E3;&#x7BA1;&#x7406;&#x5BF9;&#x8C61;</p>
+<li>type <code>string</code>, &#x76D1;&#x542C;&#x7C7B;&#x578B;&#xFF0C;&#x503C;&#x4E3A; upload/download</li>
+<li>event <code>ProgressEvent</code>, ProgressEvent &#x5BF9;&#x8C61;&#xFF0C;&#x662F; xhr &#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#x7684;&#x56DE;&#x8C03;&#x53C2;&#x6570;</li>
+<li>status <code>number</code>, &#x5F53;&#x524D;&#x8FDB;&#x5EA6;&#x72B6;&#x6001;&#xFF0C;&#x5176;&#x503C;&#x4E0E; ProgressStatus &#x679A;&#x4E3E;&#x5BF9;&#x8C61;&#x5BF9;&#x5E94;</li>
+<li>statusText <code>string</code>, &#x5F53;&#x524D;&#x8FDB;&#x5EA6;&#x72B6;&#x6001;&#x7684;&#x6587;&#x5B57;&#x63CF;&#x8FF0;</li>
+<li>ProgressStatus <code>object</code>, &#x8FDB;&#x5EA6;&#x72B6;&#x6001;&#x7684;&#x679A;&#x4E3E;&#xFF0C;&#x5176;&#x5305;&#x542B;&#xFF1A;<ul>
+<li>FAIL = 0,</li>
+<li>SUCCESS = 1,</li>
+<li>PROGRESS = 2,</li>
+<li>START = 3,</li>
+<li>CANCEL = 4,</li>
+<li>TIMEOUT = 5</li>
+</ul>
 </li>
-<li><p><a href="../core/leach.html">leach</a> <code>object</code></p>
-<p>&#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x8FC7;&#x6EE4;&#x5668;</p>
-</li>
-<li><p><a href="../core/config.html">config</a> <code>object</code></p>
-<p>&#x8BF7;&#x6C42;&#x914D;&#x7F6E;&#x7684;&#x81EA;&#x5B9A;&#x4E49;</p>
-</li>
-<li><p><a href="../core/module.html">module</a> <code>object</code></p>
-<p>&#x63A5;&#x53E3;&#x6A21;&#x5757;&#x5206;&#x5272;</p>
-</li>
-<li><p><a href="../core/transformData.html">transformData</a> <code>Function</code></p>
-<p>&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x51FD;&#x6570;</p>
-</li>
+<li>total <code>number</code>, &#x5F53; status === ProgressStatus.PROGRESS &#x624D;&#x6709;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4E3A;&#x4E0A;&#x4F20;/&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x603B;&#x5927;&#x5C0F;&#xFF0C;&#x6765;&#x81EA; evt.event.total</li>
+<li>loaded <code>number</code>, &#x5F53; status === ProgressStatus.PROGRESS &#x624D;&#x6709;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4E3A;&#x5DF2;&#x7ECF;&#x4E0A;&#x4F20;/&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x6765;&#x81EA; evt.event.loaded</li>
 </ul>
 
                                 
@@ -442,14 +445,10 @@ request(<span class="hljs-string">&apos;apiname&apos;</span>, {
 
             
                 
-                <a href="install.html" class="navigation navigation-prev " aria-label="Previous page: 安装">
+                <a href="cancel.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Cancel">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../core/apis.html" class="navigation navigation-next " aria-label="Next page: Apis">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -458,7 +457,7 @@ request(<span class="hljs-string">&apos;apiname&apos;</span>, {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"开始","level":"1.2.1","depth":2,"next":{"title":"Apis","level":"2.1","depth":1,"path":"core/apis.md","ref":"core/apis.md","articles":[]},"previous":{"title":"安装","level":"1.2","depth":1,"path":"get/install.md","ref":"get/install.md","articles":[{"title":"开始","level":"1.2.1","depth":2,"path":"get/start.md","ref":"get/start.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"get/start.md","mtime":"2020-06-14T13:19:18.986Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-21T06:42:22.380Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ProgressListener","level":"3.5","depth":1,"previous":{"title":"Cancel","level":"3.4","depth":1,"path":"adv/cancel.md","ref":"adv/cancel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"adv/progressListener.md","mtime":"2020-06-21T06:30:00.592Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-21T06:42:22.380Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
