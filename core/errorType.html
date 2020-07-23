@@ -356,7 +356,7 @@
 <h3 id="errorerrortype">error.ErrorType</h3>
 <p>ErrorType &#x4E3B;&#x8981;&#x7684;&#x7C7B;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ul>
-<li>CATCHED &#x4E3A; 0&#xFF0C;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; toCatch &#x51FD;&#x6570;&#xFF08;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x62E6;&#x622A;&#xFF09;</li>
+<li>STOP &#x4E3A; 0&#xFF0C;promise&#x94FE;&#x7EC8;&#x6B62;(&#x4E3A;&#x4E86;&#x4E0D;&#x6267;&#x884C; then &#x65B9;&#x6CD5;&#x4E2D;&#x6216;&#x8005; await &#x540E;&#x7684;&#x7A0B;&#x5E8F;)</li>
 <li>FAIL &#x4E3A; 1&#xFF0C;&#x4E00;&#x822C;&#x9519;&#x8BEF;</li>
 <li>THROTTLE &#x4E3A; 2&#xFF0C;&#x89E6;&#x53D1;&#x8282;&#x6D41;</li>
 <li>STATUS &#x4E3A; 3&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x72B6;&#x6001;&#x7801;&#x9519;&#x8BEF;</li>
@@ -373,7 +373,7 @@
     <span class="hljs-built_in">console</span>.log(err.type) <span class="hljs-comment">// number</span>
     <span class="hljs-built_in">console</span>.log(err.ErrorType)
     <span class="hljs-comment">// {</span>
-    <span class="hljs-comment">//   CATCHED: 0,</span>
+    <span class="hljs-comment">//   STOP: 0,</span>
     <span class="hljs-comment">//   FAIL: 1,</span>
     <span class="hljs-comment">//   THROTTLE: 2,</span>
     <span class="hljs-comment">//   STATUS: 3,</span>
@@ -433,7 +433,7 @@ request(<span class="hljs-string">&apos;apiname&apos;</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ErrorType","level":"2.7","depth":1,"next":{"title":"Interceptor","level":"3.1","depth":1,"path":"adv/interceptor.md","ref":"adv/interceptor.md","articles":[]},"previous":{"title":"Throttle","level":"2.6","depth":1,"path":"core/throttle.md","ref":"core/throttle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/errorType.md","mtime":"2020-06-14T15:06:46.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-21T06:42:22.380Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ErrorType","level":"2.7","depth":1,"next":{"title":"Interceptor","level":"3.1","depth":1,"path":"adv/interceptor.md","ref":"adv/interceptor.md","articles":[]},"previous":{"title":"Throttle","level":"2.6","depth":1,"path":"core/throttle.md","ref":"core/throttle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/errorType.md","mtime":"2020-07-23T15:29:21.131Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-23T15:29:57.249Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -34,7 +34,7 @@ interceptor.request((config) => {
 > interceptor.response( interceptor: (res: object) => void | object )
 
 interceptor.response 传入一个函数作为响应拦截器，函数接收一个 res 对象，并可以对其进行一些修改。
-返回结果将被 leach 接收到，如果不返回或者返回值为空，则 netrol 会退出 promise 链，并 reject 一次 type 为 'error.ErrorType.CATCHED'(0) 的 错误。
+返回结果将被 leach 接收到，如果不返回或者返回值为空，则 netrol 会退出 promise 链，并 reject 一次 type 为 'error.ErrorType.STOP'(0) 的 错误。
 
 netrol [对错误返回进行了分类设计](./errorType.md)，因此建议需要对后端数据做判断的操作放在 interceptor.response 中进行。
 当结果不想给 request 接受到的时候，可以直接返回一个空值。

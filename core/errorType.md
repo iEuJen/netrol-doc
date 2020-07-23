@@ -6,7 +6,7 @@ netrol 对执行过程的错误，进行了分类设计，让我们在使用的�
 
 ErrorType 主要的类型如下：
 
-- CATCHED 为 0，已经通过 toCatch 函数（或者其他方式拦截）
+- STOP 为 0，promise链终止(为了不执行 then 方法中或者 await 后的程序)
 - FAIL 为 1，一般错误
 - THROTTLE 为 2，触发节流
 - STATUS 为 3，服务器状态码错误
@@ -27,7 +27,7 @@ async function demo () {
     console.log(err.type) // number
     console.log(err.ErrorType)
     // {
-    //   CATCHED: 0,
+    //   STOP: 0,
     //   FAIL: 1,
     //   THROTTLE: 2,
     //   STATUS: 3,

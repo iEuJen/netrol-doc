@@ -16,6 +16,6 @@ toCatch(404, () => {
 })
 ```
 
-被 toCatch 捕获的请求，将 reject 一个 ErrorType.CATCHED 的错误。如果状态码不在 200 到 300 之间，且没有定义 toCatch，则会 reject 一个 ErrorType.STATUS 的错误。
+被 toCatch 捕获的请求，将 reject 一个 ErrorType.STOP 的错误。如果状态码不在 200 到 300 之间，且没有定义 toCatch，则会 reject 一个 ErrorType.STATUS 的错误。
 
 报错具体详情，可查看 [ErrorType](./errorType.md) 一节。
