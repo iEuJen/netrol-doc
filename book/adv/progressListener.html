@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ProgressListener | netrol</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="netrol 使用手册">
+    
+    <link rel="preload" href="/netrol-doc/assets/css/0.styles.106c61b2.css" as="style"><link rel="preload" href="/netrol-doc/assets/js/app.9cda88ee.js" as="script"><link rel="preload" href="/netrol-doc/assets/js/2.ae8a1d53.js" as="script"><link rel="preload" href="/netrol-doc/assets/js/11.fad901d7.js" as="script"><link rel="prefetch" href="/netrol-doc/assets/js/10.e990b3cc.js"><link rel="prefetch" href="/netrol-doc/assets/js/12.d17952b2.js"><link rel="prefetch" href="/netrol-doc/assets/js/13.aa813b69.js"><link rel="prefetch" href="/netrol-doc/assets/js/14.52d33af3.js"><link rel="prefetch" href="/netrol-doc/assets/js/15.60a4584c.js"><link rel="prefetch" href="/netrol-doc/assets/js/16.7c9c493e.js"><link rel="prefetch" href="/netrol-doc/assets/js/17.d7cf8b44.js"><link rel="prefetch" href="/netrol-doc/assets/js/18.d62a87e3.js"><link rel="prefetch" href="/netrol-doc/assets/js/19.c53dd504.js"><link rel="prefetch" href="/netrol-doc/assets/js/20.0d5396f4.js"><link rel="prefetch" href="/netrol-doc/assets/js/21.947ecb60.js"><link rel="prefetch" href="/netrol-doc/assets/js/3.e97e79d5.js"><link rel="prefetch" href="/netrol-doc/assets/js/4.59ec26eb.js"><link rel="prefetch" href="/netrol-doc/assets/js/5.56f8dcd7.js"><link rel="prefetch" href="/netrol-doc/assets/js/6.a4054775.js"><link rel="prefetch" href="/netrol-doc/assets/js/7.09d15012.js"><link rel="prefetch" href="/netrol-doc/assets/js/8.d6564465.js"><link rel="prefetch" href="/netrol-doc/assets/js/9.c15315cb.js">
+    <link rel="stylesheet" href="/netrol-doc/assets/css/0.styles.106c61b2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/netrol-doc/" class="home-link router-link-active"><!----> <span class="site-name">netrol</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://github.com/iEuJen/netrol" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/netrol-doc/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://github.com/iEuJen/netrol" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/netrol-doc/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/netrol-doc/book/" class="sidebar-heading clickable router-link-active"><span>快速上手</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/netrol-doc/book/get/install.html" class="sidebar-link">安装</a></li><li><a href="/netrol-doc/book/get/start.html" class="sidebar-link">开始</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>核心概念</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/netrol-doc/book/core/apis.html" class="sidebar-link">Apis</a></li><li><a href="/netrol-doc/book/core/leach.html" class="sidebar-link">Leach</a></li><li><a href="/netrol-doc/book/core/config.html" class="sidebar-link">Config</a></li><li><a href="/netrol-doc/book/core/module.html" class="sidebar-link">Module</a></li><li><a href="/netrol-doc/book/core/throttle.html" class="sidebar-link">Throttle</a></li><li><a href="/netrol-doc/book/core/errorType.html" class="sidebar-link">ErrorType</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>进阶使用</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/netrol-doc/book/adv/interceptor.html" class="sidebar-link">Interceptor</a></li><li><a href="/netrol-doc/book/adv/toCatch.html" class="sidebar-link">ToCatch</a></li><li><a href="/netrol-doc/book/adv/timeoutHander.html" class="sidebar-link">TimeoutHander</a></li><li><a href="/netrol-doc/book/adv/cancel.html" class="sidebar-link">Cancel</a></li><li><a href="/netrol-doc/book/adv/progressListener.html" aria-current="page" class="active sidebar-link">ProgressListener</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="progresslistener"><a href="#progresslistener" class="header-anchor">#</a> ProgressListener</h1> <p>用于监听上传/下载进度的对象。</p> <h3 id="progresslistener-upload-上传监听器"><a href="#progresslistener-upload-上传监听器" class="header-anchor">#</a> progressListener.upload 上传监听器</h3> <blockquote><p>progressListener.upload(apiName: string, exec: Function)</p></blockquote> <p>上传监听器接受两个参数，第一个参数为要监听的 apiName，第二个参数为触发监听的方法。
+exec 执行方法接收一个 evt 参数，用于判断监听类型，以及进度状态。</p> <h4 id="使用范例"><a href="#使用范例" class="header-anchor">#</a> 使用范例</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> progressListener <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'netrol'</span>
+progressListener<span class="token punctuation">.</span><span class="token function">upload</span><span class="token punctuation">(</span><span class="token string">'file'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">evt</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>evt<span class="token punctuation">)</span>
+  <span class="token comment">/**
+   * evt 对象
+   * {
+      type: string,
+      event: ProgressEvent,
+      status: number,
+      statusText: string,
+      ProgressStatus: object
+      total: number
+      loaded: number
+   * }
+   */</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="progresslistener-download-下载监听器"><a href="#progresslistener-download-下载监听器" class="header-anchor">#</a> progressListener.download 下载监听器</h3> <blockquote><p>progressListener.download(apiName: string, exec: Function)</p></blockquote> <p>下载监听器使用同上载监听器一样。接受两个参数，第一个参数为要监听的 apiName，第二个参数为触发监听的方法。
+exec 执行方法接收一个 event 参数，用于判断监听类型，以及进度状态。</p> <h4 id="使用范例-2"><a href="#使用范例-2" class="header-anchor">#</a> 使用范例</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> progressListener <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'netrol'</span>
+progressListener<span class="token punctuation">.</span><span class="token function">download</span><span class="token punctuation">(</span><span class="token string">'file'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">evt</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>evt<span class="token punctuation">)</span>
+  <span class="token comment">/**
+   * evt 对象
+   * {
+      type: string,
+      event: ProgressEvent,
+      status: number,
+      statusText: string,
+      ProgressStatus: object
+      total: number
+      loaded: number
+   * }
+   */</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="evt-对象"><a href="#evt-对象" class="header-anchor">#</a> evt 对象</h3> <p>evt 是上传/下载监听器的回调参数，它包括以下属性</p> <ul><li>type <code>string</code>, 监听类型，值为 upload/download</li> <li>event <code>ProgressEvent</code>, ProgressEvent 对象，是 xhr 响应事件的回调参数</li> <li>status <code>number</code>, 当前进度状态，其值与 ProgressStatus 枚举对象对应</li> <li>statusText <code>string</code>, 当前进度状态的文字描述</li> <li>ProgressStatus <code>object</code>, 进度状态的枚举，其包含：
+<ul><li>FAIL = 0,</li> <li>SUCCESS = 1,</li> <li>PROGRESS = 2,</li> <li>START = 3,</li> <li>CANCEL = 4,</li> <li>TIMEOUT = 5</li></ul></li> <li>total <code>number</code>, 当 status === ProgressStatus.PROGRESS 才有的属性，为上传/下载文件的总大小，来自 evt.event.total</li> <li>loaded <code>number</code>, 当 status === ProgressStatus.PROGRESS 才有的属性，为已经上传/下载文件的大小，来自 evt.event.loaded</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/netrol-doc/book/adv/cancel.html" class="prev">
+        Cancel
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/netrol-doc/assets/js/app.9cda88ee.js" defer></script><script src="/netrol-doc/assets/js/2.ae8a1d53.js" defer></script><script src="/netrol-doc/assets/js/11.fad901d7.js" defer></script>
+  </body>
+</html>
